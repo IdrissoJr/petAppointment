@@ -8,11 +8,7 @@
         <font-awesome-icon icon="plus" class="mr-3" /> Add Appointment
       </h4>
 
-      <form
-        class="px-4"
-        :class="{ hidden: addToggle }"
-        @submit.prevent="requestAdd"
-      >
+      <form class="px-4" v-if="addToggle" @submit.prevent="requestAdd">
         <label class="block font-bold mt-4 mb-1 text-gray-700" for="pet-name"
           >Pet Name</label
         >
@@ -102,7 +98,7 @@ export default {
   data() {
     return {
       formData: [],
-      addToggle: true,
+      addToggle: false,
     };
   }, //data
   methods: {
