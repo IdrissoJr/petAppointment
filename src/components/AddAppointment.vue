@@ -111,7 +111,7 @@ export default {
       };
       this.$emit("add", this.formData);
       this.formData = [];
-      this.addToggle = true;
+      this.addToggle = false;
     },
   },
 };
